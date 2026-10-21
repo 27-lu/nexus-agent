@@ -24,7 +24,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       pool-name: nexus-agent-hikari
-      maximum-pool-size: 10
+      maximum-pool-size: 20
       minimum-idle: 2
   kafka:
     bootstrap-servers: 127.0.0.1:9092
@@ -346,7 +346,7 @@ app:
       # 连接超时，毫秒。
       connect-timeout-millis: 3000
       # 读超时，毫秒。
-      socket-timeout-millis: 5000
+      socket-timeout-millis: 7000
     neo4j:
       # 是否启用 Neo4j 结构图。默认关闭，关闭时结构图服务自动回退到 MySQL 结构节点表。
       enabled: true
@@ -354,7 +354,7 @@ app:
       username: neo4j
       password: ${NEO4J_PASSWORD:12345678}
       database: neo4j
-      query-timeout-seconds: 5
+      query-timeout-seconds: 7
 
 logging:
   level:
